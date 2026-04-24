@@ -13,10 +13,10 @@ function print_array($mat, $x, $y){
                 continue;
             }
             echo "\t" . $mat[$i][$j];
+
         }
         echo "\n\n";
     }
-
 }
 
 function somar_elementos($mat, $x, $y, $inicia = 1){
@@ -87,4 +87,3 @@ echo "Soma dos elementos na diagonal: " . $soma_diagonal . "\n";
 echo "Soma dos elementos na diagonal inversa: " . $soma_diagonal_inversa . "\n";
 echo "Elemento de Maior valor: " . $maior_numero . "\n";
 echo "Elemento de Menor valor: " . $menor_numero . "\n";
-
