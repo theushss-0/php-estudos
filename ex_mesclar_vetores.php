@@ -11,7 +11,6 @@ if ($vetor1[0] > $vetor2[count($vetor2)-1]){
 function ordenar_vetor($vet){
     $tamanho = count($vet);
 
-
     for($i=0;$i < $tamanho; $i++){
         for($j=0;$j < $tamanho; $j++){
             if($vet[$i] < $vet[$j]){
