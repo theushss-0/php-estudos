@@ -4,7 +4,7 @@ $arr = [7,4,6,2,2,5,3,0,1,10];
 
 function imprimir_array($vet){
     for($i=0;$i<count($vet); $i++){
-        echo "M[${i}] = " . $vet[$i] . "\n";
+        echo "A[${i}] = " . $vet[$i] . "\n";
     }
 }
 
