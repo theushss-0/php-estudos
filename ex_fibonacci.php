@@ -23,5 +23,5 @@ function fibonacci_sem_recursao($num){
 	
 }
 
-echo "melhor caso sem recursão: " . fibonacci_sem_recursao(50) . "\n";
-echo "pior caso usando recursão: " . fibonacci_recursao(50) . "\n";
+echo "melhor caso sem recursão: " . fibonacci_sem_recursao(45) . "\n";
+echo "pior caso usando recursão: " . fibonacci_recursao(45) . "\n";
