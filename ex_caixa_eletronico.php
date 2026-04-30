@@ -3,13 +3,15 @@
 function linha(){
     echo "\n--------------------------------------------------\n";
 }
-
+$qtd_notas = [0,0,0,0,0];
+$notas = [1,5,10,50,100];
 function sacar($valor){
 
     $valor_minimo = 10.0;
     $valor_maximo = 600.0;
 
-    $notas = [1,5,10,50,100];
+    global $notas;
+    global $qtd_notas;
     $notas_escolhidas = [];
 
     $aux_valor = $valor;
@@ -28,12 +30,13 @@ function sacar($valor){
         if($notas[$i] <= $aux_valor) {
             $notas_escolhidas[] = $notas[$i];
             $aux_valor -= $notas[$i];
+            $qtd_notas[$i] += 1;
         }else{
             $i--;
         }
     }
 
-    return $notas_escolhidas;
+    return $notas_escolhidas ;
 
 }
 
@@ -53,6 +56,11 @@ if($notas_escolhidas != []){
     for($i=0; $i<count($notas_escolhidas); $i++){
         echo "R$ " . $notas_escolhidas[$i] . "\t";
         $sacado += $notas_escolhidas[$i];
+    }
+
+    echo "\nQuantidade de notas:\n";
+    for($i=0; $i<count($notas); $i++){
+        echo "$" .$notas[$i] . ": " . $qtd_notas[$i] . "\t";
     }
         
     echo "\nValor total saque: R$ " . $sacado;
