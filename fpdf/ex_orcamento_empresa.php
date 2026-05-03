@@ -32,4 +32,4 @@ class PDF extends FPDF{
 $pdf =  new PDF();
 $pdf->AddPage();
 
-$pdf->Output("F", "orcamento_empresa.pdf");
+$pdf->Output("F", "arquivos/orcamento_empresa.pdf");

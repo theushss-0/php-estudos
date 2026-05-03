@@ -24,7 +24,7 @@ $pdf->Cell(0,10,$dadosPessoa[0],'RTL',1);
 $pdf->Cell(0,10,$dadosPessoa[1], 'RL',1);
 $pdf->Cell(0,10,$dadosPessoa[2],'RBL',1);
 
-$pdf->Output('F',"cliente_data.pdf");
+$pdf->Output('F',"arquivos/cliente_data.pdf");
 
 
 
