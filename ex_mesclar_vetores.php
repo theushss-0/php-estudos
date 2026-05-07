@@ -1,7 +1,7 @@
 <?php
 
 $vetor1 = [1,5,7,9];
-$vetor2 = [4,8,10,11,15];
+$vetor2 = [4,8,10,11,15,17];
 
 function ordenar_vetores($vet1, $vet2){
     $vet3 = [];
@@ -12,10 +12,12 @@ function ordenar_vetores($vet1, $vet2){
     $i = 0;
     $j = 0;
 
-    while($i < $tam1 and $j < $tam2){
+    while($i < $tam1 or $j < $tam2){
+    
         if($vet1[$i] < $vet2[$j]){
             $vet3[] = $vet1[$i];
             $i++;
+
         }else{
             $vet3[] = $vet2[$j];
             $j++;
@@ -31,6 +33,7 @@ function ordenar_vetores($vet1, $vet2){
         $vet3[] = $vet2[$j];
         $j++;
     }
+  
     return $vet3;
 }
 
