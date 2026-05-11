@@ -25,7 +25,7 @@ class PDF extends FPDF{
         $this->Rect(0,0,210,297,'F');
 
 
-        $this->Image('imagens/php-logo.jpg', 15, 12, 30);
+        $this->Image('imagens/logo.jpg', 15, 12, 30);
 
         $y = 15;
 
@@ -129,7 +129,6 @@ class PDF extends FPDF{
                 );
 
                 $this->Cell(30,10,'R$ ' . number_format($this->totalPedido,2,',','.'),1,1,'R');
-                $this->totalGeral=0;
         }
 
         
@@ -153,3 +152,4 @@ $pdf->SetFont('Arial', '', 10);
 $pdf->exibir_itens($itens);
 
 $pdf->Output('F','arquivos/orcamento_empresa.pdf');
+
